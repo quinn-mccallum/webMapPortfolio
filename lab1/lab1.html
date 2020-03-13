@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+
+<body>
+  <div class='content-area'>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Lab 1 Write Up</h1>
+        </div>
+        <div class="col-8">
+          <p>
+            The geojson object represents geospatial vector data for web mapping. All the geographic features (points, lines and polygons) are detailed within the main object of type “featureCollection”. Each feature is then listed as an object with
+            keys
+            “type”, “properties” and “geometry”. “Feature” is the value of each “type” key, denoting a geographic feature belonging to the featureCollection. The properties key holds attribute information (non-geospatial information) about that
+            particular feature, however, this geojson file does not contain property information for its features and is therefore left as an empty object. The geometry key holds an object specifying type and coordinates. The type of feature being
+            specified will be a point, lineString or polygon, etc. Coordinate values are listed under the coordinates key.
+          </p>
+
+          <p>
+            A geojson file contains all it’s features in one file regardless of the type of feature, and each feature contains all the necessary property and geospatial data in one place. Alternatively, shapefiles keep different feature types, as
+            well as
+            attribute information, in multiple separate files linked by index files and displayed as layers. The same geospatial data represented in both a geojson file and a shapefile are comparable in file size (with the geojson file being 100mb
+            larger
+            than the shapefile), although the shapefile takes up 4x more disk space than the geojson file.
+          </p>
+
+          <p>
+            Geojson files are advantageous to shapefiles because all the data is contained in one, human-readable text file. They are more accessible to developers because geojson files support parsing by most programming languages. Geojson can also
+            feature topology through topojson. However, the single, large file format of geojson may lead to slower load times than shapefiles. In addition, many platforms support shapefiles as this file type has been the benchmark for many years
+            since
+            it was developed 30+ years ago.
+          </p>
+          <br />
+          <a href="map.geojson">
+            <h3>Data</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

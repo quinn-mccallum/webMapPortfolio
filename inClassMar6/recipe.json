@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "layers": {
+    "hello-toronto-density": {
+      "source": "mapbox://tileset-source/tqm/hello-toronto-density",
+      "minzoom": 6,
+      "maxzoom": 22
+    }
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #legend {
+      position: fixed;
+      bottom: 10px;
+      right: 50px;
+      display: block;
+      float: left;
+      width: 30%;
+      height: 20%;
+      z-index: 2;
+    }
+    .legend label,
+    .legend span {
+      display:block;
+      float:left;
+      height:15px;
+      width:10%;
+      text-align:center;
+      font-size:9px;
+      color:#808080;
+      }
+
+      .legend .extra span{
+        display:inline-block;
+        float:left;
+        height:5px;
+        width:30%;
+        text-align:left;
+        font-size:9px;
+      }
+
+      .legend label {
+        text-align: left;
+      }
+
+      small {
+        /* display: block; */
+        float: left;
+        padding-top: 5px;
+      }
+  </style>
+</head>
+
+<body>
+
+  <div id='legend'>
+    <strong>Average Break and Enter Crimes per Year by Neighbourhood in Toronto, 2014-2018</strong>
+    <nav class='legend'>
+      <div style='padding-top: 5px;'>
+        <span style='background:#ff1493; opacity:0.1;'></span>
+        <span style='background:#ff1493; opacity:0.2;'></span>
+        <span style='background:#ff1493; opacity:0.3;'></span>
+        <span style='background:#ff1493; opacity:0.4;'></span>
+        <span style='background:#ff1493; opacity:0.5;'></span>
+        <span style='background:#ff1493; opacity:0.6;'></span>
+        <span style='background:#ff1493; opacity:0.7;'></span>
+        <span style='background:#ff1493; opacity:0.8;'></span>
+        <span style='background:#ff1493; opacity:0.9;'></span>
+        <span style='background:#ff1493; opacity:1;'></span>
+        <label>0-22</label>
+        <label>23-44</label>
+        <label>45-66</label>
+        <label>67-88</label>
+        <label>89-110</label>
+        <label>111-132</label>
+        <label>133-154</label>
+        <label>155-176</label>
+        <label>177-198</label>
+        <label>199-220</label>
+      </div>
+      <br/>
+      <div class='legend extra'>
+        <div>
+          <span style='background: blue; width: 25%; margin-top: 2.5px'></span>
+          <label style='width: 35%; padding-left: 5px':>Police Division Borders</label>
+        </div>
+        <div style="width: 100%; padding-top: 10px;">
+          <span style='background: blue; border-radius: 50px; width: 10px; height:10px; display: inline-block;'></span>
+          <label style='width: 25%; padding-left: 5px;'>Police Stations</label>
+        </div>
+      </div>
+      <small>Source: <a href="http://data.torontopolice.on.ca/datasets/neighbourhood-crime-rates-boundary-file-">Toronto Police Services: Public Safety Data Potral</a></small>
+    </div>
+
+
+
+  <div id='map' class='map' onload="getData()"> </div>
+  <script src='./index.js'></script>
+</body>
+
+</html>
