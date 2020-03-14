@@ -3,7 +3,7 @@ var map = new mapboxgl.Map({
   container: 'map', //container id in HTML
   style: 'mapbox://styles/tqm/ck7qtpv8l1jzp1io1ni5q2b56', //stylesheet location
   center: [-79.3753, 43.71777], // starting point, longitude/latitude
-  zoom: 10.25 // starting zoom level
+  zoom: 10.35 // starting zoom level
 });
 
 map.on('load', function() {
@@ -61,7 +61,7 @@ map.on('load', function() {
     'layout': {},
     'paint': {
       'line-color': 'black',
-      'line-width': 2
+      'line-width': 1
     },
     'source-layer': 'Neighbourhood_Crime_Rates_Bou-4sx3fc'
   });
@@ -72,7 +72,8 @@ map.on('load', function() {
     'source': 'policeDivisionsToronto',
     'layout': {},
     'paint': {
-      'line-color': '#ffd52e',
+      // 'line-color': '#ffd52e',
+      'line-color': '#2cc7a2',
       'line-width': 3
     }
   });
@@ -94,7 +95,8 @@ map.on('load', function() {
     'source': 'policeStationsToronto',
     'layout': {},
     'paint': {
-      'circle-color': '#ffd52e',
+      // 'circle-color': '#ffd52e',
+      'circle-color': '#2cc7a2',
       'circle-radius': 7,
       'circle-stroke-color': 'black',
       'circle-stroke-width': 2
