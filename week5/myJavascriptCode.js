@@ -2,16 +2,16 @@ mapboxgl.baseApiUrl = 'https://api.mapbox.com';
 mapboxgl.accessToken = 'pk.eyJ1IjoidHFtIiwiYSI6ImNrNTg4dTB3MTBjMnYzbm15OG5kbG9kdm0ifQ.nKjtxAoUjFg0TGiCbYaHfA';
 var map = new mapboxgl.Map({
    container: 'map',  //container id in HTML
-   style: 'mapbox://styles/tqm/ck62cw6e00xxj1ip4oqd8ppc7',  //stylesheet location
-   center: [-79.3753, 43.65696],  // starting point, longitude/latitude
+   style: 'mapbox://styles/tqm/ck7qvubgf1mjg1iqxczqs19et',  //stylesheet location
+   center: [-79.3753, 43.7],  // starting point, longitude/latitude
    zoom: 11 // starting zoom level
 });
 
 map.on('load', function(){
 
   map.addSource('supermarketsGeojsonData', {
-    'type': 'geojson',
-    'data': './supermarkets.geojson'
+    'type': 'vector',
+    'url': 'mapbox://tqm.9cvovxov'
   });
 
   map.addSource('routeToSchoolGeojsonData', {
@@ -30,9 +30,10 @@ map.on('load', function(){
     'source': 'supermarketsGeojsonData',
     'layout': {},
     'paint': {
-      'circle-color': 'pink',
-      'circle-radius': 10
-    }
+      'circle-color': 'black',
+      'circle-radius': 5
+    },
+    'source-layer': 'supermarkets-1xu504'
   });
 
   map.addLayer({
@@ -41,7 +42,7 @@ map.on('load', function(){
     'source': 'routeToSchoolGeojsonData',
     'layout': {},
     'paint': {
-      'line-color': 'blue',
+      'line-color': '#ffcc00',
       'line-width': 2,
       'line-opacity': 0.9
     },
@@ -54,8 +55,8 @@ map.on('load', function(){
     'source': 'homeAndSchoolPoints',
     'layout': {},
     'paint': {
-      'circle-color': 'blue',
-      'circle-radius': 10,
+      'circle-color': '#ffcc00',
+      'circle-radius': 5,
     },
     'source-layer': 'routeToSchool-6wo722'
   })

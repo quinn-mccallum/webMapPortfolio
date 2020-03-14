@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidHFtIiwiYSI6ImNrNTg4dTB3MTBjMnYzbm15OG5kbG9kdm0ifQ.nKjtxAoUjFg0TGiCbYaHfA';
 var map = new mapboxgl.Map({
   container: 'map', //container id in HTML
-  style: 'mapbox://styles/tqm/ck76a7as10eof1ipcvyvy67w6', //stylesheet location
+  style: 'mapbox://styles/tqm/ck7qshr2q0sme1imy7eycb1bh', //stylesheet location
   center: [-79.2904789, 43.057688], // starting point, longitude/latitude
   zoom: 9.5 // starting zoom level
 });
@@ -21,7 +21,7 @@ map.on('load', function() {
     'source': 'wineries',
     'layout': {},
     'paint': {
-      'circle-color': 'red',
+      'circle-color': '#f5a2ea',
       'circle-radius': [
         'case',
         ['boolean', ['feature-state', 'hover'], false],

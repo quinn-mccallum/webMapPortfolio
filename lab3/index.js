@@ -1,8 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidHFtIiwiYSI6ImNrNTg4dTB3MTBjMnYzbm15OG5kbG9kdm0ifQ.nKjtxAoUjFg0TGiCbYaHfA';
 var map = new mapboxgl.Map({
   container: 'map', //container id in HTML
-  style: 'mapbox://styles/tqm/ck76a7as10eof1ipcvyvy67w6', //stylesheet location
-  center: [-79.3753, 43.71555], // starting point, longitude/latitude
+  style: 'mapbox://styles/tqm/ck7qshr2q0sme1imy7eycb1bh', //stylesheet location
+  center: [-79.32, 43.72], // starting point, longitude/latitude
   zoom: 10.5 // starting zoom level
 });
 
@@ -30,14 +30,14 @@ map.on('load', () => {
         'interpolate',
         ['linear'],
         ['to-number', ['get', 'EUhg3n3MSze_data_COL1'], 0], // get a number, but if provided with a non-number default to 0
-        0, '#edf8fb',
-        423, '#b2e2e2',
-        508, '#66c2a4',
-        609, '#2ca25f',
-        888, '#006d2c'
+        0, '#ffffff',
+        423, '#fff9fe',
+        508, '#ffebfc',
+        609, '#ffcef8',
+        888, '#ffaff4'
       ],
       "fill-opacity": 0.8,
-      "fill-outline-color": 'black'
+      "fill-outline-color": 'white'
     },
     'source-layer': 'hello_world'
   });
@@ -54,14 +54,14 @@ map.on('load', () => {
         'interpolate',
       ['linear'],
       ['to-number', ['get', 'popDensityToronto_data_COL1'], 0],
-      0, '#edf8fb',
-      3213, '#b2e2e2',
-      4929, '#66c2a4',
-      7451, '#2ca25f',
-      11170, '#006d2c'
+      0, '#ffffff',
+      3213, '#fff9fe',
+      4929, '#ffebfc',
+      7451, '#ffcef8',
+      11170, '#ffaff4'
       ],
       'fill-opacity': 0.8,
-      'fill-outline-color': 'black'
+      'fill-outline-color': '#fff'
     },
     'source-layer': 'hello-toronto-density'
   });

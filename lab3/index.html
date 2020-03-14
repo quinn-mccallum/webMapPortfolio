@@ -21,7 +21,7 @@
     }
 
     #popLegend{
-      background-color: #fff;
+      background-color: #575757;
       border-radius: 3px;
       bottom: 30px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@
     }
 
     #denseLegend{
-      background-color: #fff;
+      background-color: #575757;
       border-radius: 3px;
       bottom: 30px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -46,6 +46,8 @@
 
     .legend h4 {
       margin: 0 0 10px;
+      color: #fff;
+
     }
 
     h5 {
@@ -63,7 +65,7 @@
     }
 
     #menu {
-      background: #fff;
+      background: #575757;
       position: absolute;
       z-index: 1;
       top: 10px;
@@ -73,6 +75,18 @@
       border: 1px solid rgba(0, 0, 0, 0.4);
       font-family: 'Open Sans', sans-serif;
       padding: 15px;
+    }
+
+    label{
+      color: #fff;
+    }
+
+    h5{
+      color: #fff;
+    }
+
+    .l{
+      color: #fff;
     }
 
   </style>
@@ -96,20 +110,20 @@
 
   <div id='popLegend' class='legend' style="display: block">
     <h4>Total Population</h4>
-    <div><span style="background-color: #edf8fb"></span>0-422</div> <!-- a 'subdivision showing a colored circle and then text describing it' -->
-    <div><span style="background-color: #b2e2e2"></span>423-507</div>
-    <div><span style="background-color: #66c2a4"></span>508-608</div>
-    <div><span style="background-color: #2ca25f"></span>609-887</div>
-    <div><span style="background-color: #006d2c"></span>888+</div>
+    <div class='l'><span style="background-color: #ffffff"></span>0-422</div> <!-- a 'subdivision showing a colored circle and then text describing it' -->
+    <div class='l'><span style="background-color: #fff9fe"></span>423-507</div>
+    <div class='l'><span style="background-color: #ffebfc"></span>508-608</div>
+    <div class='l'><span style="background-color: #ffcef8"></span>609-887</div>
+    <div class='l'><span style="background-color: #ffaff4"></span>888+</div>
   </div>
 
   <div id='denseLegend' class='legend' style='display: none'>
     <h4>Population Density</h4>
-    <div><span style="background-color: #edf8fb"></span>0-3212</div>
-    <div><span style="background-color: #b2e2e2"></span>3213-4928</div>
-    <div><span style="background-color: #66c2a4"></span>4929-7450</div>
-    <div><span style="background-color: #2ca25f"></span>7451-11169</div>
-    <div><span style="background-color: #006d2c"></span>11170+</div>
+    <div class='l'><span style="background-color: #ffffff"></span>0-3212</div>
+    <div class='l'><span style="background-color: #fff9fe"></span>3213-4928</div>
+    <div class='l'><span style="background-color: #ffebfc"></span>4929-7450</div>
+    <div class='l'><span style="background-color: #ffcef8"></span>7451-11169</div>
+    <div class='l'><span style="background-color: #ffaff4"></span>11170+</div>
   </div>
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>

@@ -1,8 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidHFtIiwiYSI6ImNrNTg4dTB3MTBjMnYzbm15OG5kbG9kdm0ifQ.nKjtxAoUjFg0TGiCbYaHfA';
 var map = new mapboxgl.Map({
   container: 'map', //container id in HTML
-  style: 'mapbox://styles/tqm/ck6vjoyrq0j2i1jo3yb5iy9w1', //stylesheet location
-  center: [-79.3753, 43.69999], // starting point, longitude/latitude
+  style: 'mapbox://styles/tqm/ck7qtpv8l1jzp1io1ni5q2b56', //stylesheet location
+  center: [-79.3753, 43.71777], // starting point, longitude/latitude
   zoom: 10.25 // starting zoom level
 });
 
@@ -34,22 +34,22 @@ map.on('load', function() {
     'source': 'neighbourhoodCrimeRatesToronto',
     'layout': {},
     'paint': {
-      'fill-color': '#ff1493',
-      'fill-opacity': {
+      'fill-color': {
         property: 'Breakand_5',
         stops: [
-          [22, 0.1],
-          [44, 0.2],
-          [66, 0.3],
-          [88, 0.4],
-          [110, 0.5],
-          [132, 0.6],
-          [154, 0.7],
-          [176, 0.8],
-          [198, 0.9],
-          [220, 1]
+          [22, '#ffffff'],
+          [44, '#ececec'],
+          [66, '#c8c8c8'],
+          [88, '#a2a2a2'],
+          [110, '#898989'],
+          [132, '#7d7d7c'],
+          [154, '#717171'],
+          [176, '#656565'],
+          [198, '#595959'],
+          [220, '#4e4e4e']
         ]
-      }
+      },
+      'fill-opacity': 0.8
     },
     'source-layer': 'Neighbourhood_Crime_Rates_Bou-4sx3fc'
   });
@@ -60,7 +60,7 @@ map.on('load', function() {
     'source': 'neighbourhoodCrimeRatesToronto',
     'layout': {},
     'paint': {
-      'line-color': '#ff1493',
+      'line-color': 'black',
       'line-width': 2
     },
     'source-layer': 'Neighbourhood_Crime_Rates_Bou-4sx3fc'
@@ -72,8 +72,8 @@ map.on('load', function() {
     'source': 'policeDivisionsToronto',
     'layout': {},
     'paint': {
-      'line-color': 'blue',
-      'line-width': 2
+      'line-color': '#ffd52e',
+      'line-width': 3
     }
   });
 
@@ -94,8 +94,10 @@ map.on('load', function() {
     'source': 'policeStationsToronto',
     'layout': {},
     'paint': {
-      'circle-color': 'blue',
-      'circle-radius': 5
+      'circle-color': '#ffd52e',
+      'circle-radius': 7,
+      'circle-stroke-color': 'black',
+      'circle-stroke-width': 2
     }
   });
 

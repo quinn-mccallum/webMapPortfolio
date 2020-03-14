@@ -14,15 +14,7 @@
   /* font-family: 'Lato', sans-serif; */
 }
 
-.name-background{
-  /* background-color: #ffe6fc; */
-  /* border-radius: 50px; */
-  /* max-width: 30% */
-}
-
 .card-text{
-  /* text-align: justify;
-  text-justify: auto; */
   padding: 1.1em;
 }
 
@@ -31,7 +23,6 @@
 }
 
 .title-background{
-  /* background-color: #ffe6fc; */
   max-width: 65%;
   margin: 0 auto;
   border-radius: 50px;
@@ -41,13 +32,11 @@
 
 h1, h3, h5{
   color: #8ac6ff;
-  /* background-color: #ffe6fc; */
   line-height: 2.1em;
   letter-spacing: .43em;
-  /* border-radius: 50px; */
 }
 
-h1 span{
+h1 span, h5 span{
   background-color: #ffe6fc;
   padding: 0.8em;
 }
@@ -89,6 +78,11 @@ p{
   color: #3a3b39;
   /* line-height: 2.1em; */
   letter-spacing: .2em;
+}
+
+.linkys{
+  text-align: center;
+  margin-bottom: 0;
 }
 
 /* .content-box {
